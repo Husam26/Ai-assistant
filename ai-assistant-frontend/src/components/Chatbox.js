@@ -52,14 +52,10 @@ const SuggestedPrompts = ({ onPromptClick }) => (
       <button onClick={() => onPromptClick("Explain quantum computing")}>
         Explain quantum computing
       </button>
-      <button
-        onClick={() => onPromptClick("Write a Python script for a timer")}
-      >
+      <button onClick={() => onPromptClick("Write a Python script for a timer")}>
         Write a Python script
       </button>
-      <button
-        onClick={() => onPromptClick("What are the main benefits of React?")}
-      >
+      <button onClick={() => onPromptClick("What are the main benefits of React?")}>
         Benefits of React
       </button>
     </div>
@@ -119,7 +115,7 @@ const ChatBox = () => {
       setIsLoading(true);
 
       try {
-        await axios.post("https://ai-assistant-shuw.onrender.com/api/chat", {
+        const res = await axios.post("https://ai-assistant-shuw.onrender.com/api/chat", {
           message: formattedPrompt,
         });
 
