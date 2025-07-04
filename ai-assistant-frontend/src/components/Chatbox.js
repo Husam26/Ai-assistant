@@ -119,10 +119,8 @@ const ChatBox = () => {
       setIsLoading(true);
 
       try {
-        const API_URL = process.env.REACT_APP_API_URL;
-
-        const res = await axios.post(API_URL, {
-          message: formattedPrompt, 
+        await axios.post("https://ai-assistant-shuw.onrender.com/api/chat", {
+          message: formattedPrompt,
         });
 
         const botMessage = {
