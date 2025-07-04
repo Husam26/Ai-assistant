@@ -122,7 +122,7 @@ const ChatBox = () => {
         const API_URL = process.env.REACT_APP_API_URL;
 
         const res = await axios.post(API_URL, {
-          message: formattedaPrompt, 
+          message: formattedPrompt, 
         });
 
         const botMessage = {
